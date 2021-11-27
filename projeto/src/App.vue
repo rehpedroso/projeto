@@ -62,32 +62,54 @@
     <v-main>
       <HelloWorld/>
     </v-main>
-    <v-footer
-    color="primary lighten-1"
-    padless
-  >
-    <v-row
-      justify="center"
-      no-gutters
+    <v-bottom-navigation
+      :value="value"
+      color="primary"
     >
-      <v-btn
-        v-for="link in links"
-        :key="link"
-        color="white"
-        text
-        rounded
-        class="my-2"
-      >
-        {{ link }}
+      <v-btn>
+        <span>Recents</span>
+
+        <v-icon>mdi-history</v-icon>
       </v-btn>
-      <v-col
-        class="primary lighten-2 py-4 text-center white--text"
-        cols="12"
+
+      <v-btn>
+        <span>Favorites</span>
+
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+
+      <v-btn>
+        <span>Nearby</span>
+
+        <v-icon>mdi-map-marker</v-icon>
+      </v-btn>
+    </v-bottom-navigation>
+    <v-footer
+      color="primary lighten-1"
+      padless
+    >
+      <v-row
+        justify="center"
+        no-gutters
       >
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-      </v-col>
-    </v-row>
-  </v-footer>
+        <v-btn
+          v-for="link in links"
+          :key="link"
+          color="white"
+          text
+          rounded
+          class="my-2"
+        >
+          {{ link }}
+        </v-btn>
+        <v-col
+          class="primary lighten-2 py-4 text-center white--text"
+          cols="12"
+        >
+          {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        </v-col>
+      </v-row>
+    </v-footer>
   </v-app>
 </template>
 
@@ -118,6 +140,7 @@ export default {
         'Contact Us',
       ],
       right: null,
+      value: 1,
     }
   },
 };
