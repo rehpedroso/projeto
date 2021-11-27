@@ -59,85 +59,35 @@
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
-
     <v-main>
       <HelloWorld/>
     </v-main>
-      <v-card height="400px">
     <v-footer
-      v-bind="localAttrs"
-      :padless="padless"
-    >
-      <v-card
-        flat
-        tile
-        width="100%"
-        class="red lighten-1 text-center"
-      >
-        <v-card-text>
-          <v-btn
-            v-for="icon in icons"
-            :key="icon"
-            class="mx-4"
-            icon
-          >
-            <v-icon size="24px">
-              {{ icon }}
-            </v-icon>
-          </v-btn>
-        </v-card-text>
-
-        <v-divider></v-divider>
-
-        <v-card-text class="white--text">
-          {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-        </v-card-text>
-      </v-card>
-    </v-footer>
-
+    color="primary lighten-1"
+    padless
+  >
     <v-row
-      align="center"
       justify="center"
-      class="ma-12"
+      no-gutters
     >
-      <v-col
-        cols="12"
-        md="8"
+      <v-btn
+        v-for="link in links"
+        :key="link"
+        color="white"
+        text
+        rounded
+        class="my-2"
       >
-        <v-select
-          v-model="variant"
-          :items="items"
-          clearable
-          label="Variant"
-        ></v-select>
-
-        <v-checkbox
-          v-model="padless"
-          hide-details
-          label="Padless"
-        ></v-checkbox>
+        {{ link }}
+      </v-btn>
+      <v-col
+        class="primary lighten-2 py-4 text-center white--text"
+        cols="12"
+      >
+        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
       </v-col>
     </v-row>
-  </v-card>
-    <v-bottom-navigation v-model="value">
-    <v-btn value="recent">
-      <span>Recent</span>
-
-      <v-icon>mdi-history</v-icon>
-    </v-btn>
-
-    <v-btn value="favorites">
-      <span>Favorites</span>
-
-      <v-icon>mdi-heart</v-icon>
-    </v-btn>
-
-    <v-btn value="nearby">
-      <span>Nearby</span>
-
-      <v-icon>mdi-map-marker</v-icon>
-    </v-btn>
-  </v-bottom-navigation>
+  </v-footer>
   </v-app>
 </template>
 
@@ -154,37 +104,21 @@ export default {
   data () {
     return {
       drawer: false,
-      icons: [
-        'mdi-home',
-        'mdi-email',
-        'mdi-calendar',
-        'mdi-delete',
-      ],
       items: [
         { title: 'Dashboard', icon: 'mdi-view-dashboard' },
         { title: 'Photos', icon: 'mdi-image' },
         { title: 'About', icon: 'mdi-help-box' },
-        'default',
-        'absolute',
-        'fixed',
+      ],
+      links: [
+        'Home',
+        'About Us',
+        'Team',
+        'Services',
+        'Blog',
+        'Contact Us',
       ],
       right: null,
-      value: 'recent',
-      padless: false,
-      variant: 'default',
     }
-  },
-  computed: {
-    localAttrs () {
-      const attrs = {}
-      if (this.variant === 'default') {
-        attrs.absolute = false
-        attrs.fixed = false
-      } else {
-        attrs[this.variant] = true
-      }
-      return attrs
-    },
   },
 };
 </script>
