@@ -5,6 +5,15 @@
 ## Imagem
 ![alt text](https://github.com/rehpedroso/projeto/blob/master/projeto/AF1.jpg)
 
+# Home
+![alt text](https://github.com/rehpedroso/projeto/blob/master/projeto/Home.png)
+
+# Imagens
+![alt text](https://github.com/rehpedroso/projeto/blob/master/projeto/Imagens.png)
+
+# Localização
+![alt text](https://github.com/rehpedroso/projeto/blob/master/projeto/Localizacao.png)
+
 ## Project setup
 ```
 npm install
