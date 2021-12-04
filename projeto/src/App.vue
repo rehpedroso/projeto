@@ -22,43 +22,33 @@
         </v-list-item>  
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar
+    <v-toolbar
       app
-      color="primary"
-      dark
+      prominent 
+      color="blue"
     >
       <v-app-bar-nav-icon @click.stop='drawer = !drawer'></v-app-bar-nav-icon>
       <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        <v-toolbar-title>Title</v-toolbar-title>
       </div>
-
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
       </v-btn>
-    </v-app-bar>
+
+      <v-btn icon>
+        <v-icon>mdi-home</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-map-marker</v-icon>
+      </v-btn>
+    </v-toolbar>
     <v-main>
       <HelloWorld/>
     </v-main>
@@ -113,23 +103,24 @@
   </v-app>
 </template>
 
+
+
 <script>
-import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
   },
 
   data () {
     return {
       drawer: false,
       items: [
-        { title: 'Dashboard', icon: 'mdi-view-dashboard' },
-        { title: 'Photos', icon: 'mdi-image' },
-        { title: 'About', icon: 'mdi-help-box' },
+        { title: 'Pesquisa', icon: 'mdi-magnify' },
+        { title: 'Menu', icon: 'mdi-home' },
+        { title: 'Favoritos', icon: 'mdi-heart' },
+        { title: 'Localização', icon: 'mdi-map-marker' },
       ],
       links: [
         'Home',
