@@ -3,8 +3,8 @@
     <v-navigation-drawer v-model="drawer" app>
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="title">Application</v-list-item-title>
-          <v-list-item-subtitle>subtitle</v-list-item-subtitle>
+          <v-list-item-title class="title">Buscas</v-list-item-title>
+          <v-list-item-subtitle></v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
@@ -114,22 +114,22 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    
   },
 
   data () {
     return {
       drawer: false,
       items: [
-        { title: 'Dashboard', icon: 'mdi-view-dashboard' },
-        { title: 'Photos', icon: 'mdi-image' },
-        { title: 'About', icon: 'mdi-help-box' },
+        {title: 'Home', icon: 'mdi-home', to:'/'},
+        {title: 'Imagens', icon: 'mdi-image', to:'/images'},
+        {title: 'Sobre', icon: 'mdi-domain', to:'/about'},
+        {title: 'Cards', icon: 'mdi-help-box', to:'/card'},
       ],
       links: [
         'Home',

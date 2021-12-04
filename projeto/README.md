@@ -1,3 +1,9 @@
+Rebeca Pedroso Silva - RA: 190664
+Telas:
+
+AF1
+<img src="/docs/logo.png" alt="My cool logo"/>
+
 # projeto
 
 ## Project setup
