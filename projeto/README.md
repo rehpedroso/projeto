@@ -1,5 +1,8 @@
 # projeto
 
+# Imagem
+![alt text](https://github.com/rehpedroso/projeto/blob/master/projeto/AF1.jpg)
+
 ## Project setup
 ```
 npm install
