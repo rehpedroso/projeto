@@ -20,6 +20,11 @@ const routes = [
     component: () => import('../views/Favoritos.vue')
   },
   {
+    path: '/:id',
+    name: 'MyCard',
+    component: () => import('@/components/MyCard')
+  },
+  {
     path: '/imagens',
     name: 'Imagens',
     component: () => import('../views/Imagens.vue')

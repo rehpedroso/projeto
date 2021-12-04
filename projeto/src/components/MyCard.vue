@@ -71,8 +71,26 @@
         text
         @click="reserve"
       >
-        Reserve
+        {{id+1}}
       </v-btn>
     </v-card-actions>
   </v-card>
 </template>
+
+<script>
+  export default {
+    props:['id'],
+    data: () =>({
+      loading: false,
+      selection: 1,
+    }),
+
+    methods: {
+      reserve () {
+        this.loading = true
+
+        setTimeout(() => (this.loading = false), 2000)
+      },
+    },
+  }
+</script>

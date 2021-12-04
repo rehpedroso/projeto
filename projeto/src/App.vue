@@ -29,7 +29,7 @@
     >
       <v-app-bar-nav-icon @click.stop='drawer = !drawer'></v-app-bar-nav-icon>
       <div class="d-flex align-center">
-        <v-toolbar-title>Title</v-toolbar-title>
+        <v-toolbar-title></v-toolbar-title>
       </div>
       <v-spacer></v-spacer>
 
