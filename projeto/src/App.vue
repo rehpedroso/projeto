@@ -3,15 +3,15 @@
     <v-navigation-drawer v-model="drawer" app>
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="title">Application</v-list-item-title>
-          <v-list-item-subtitle>subtitle</v-list-item-subtitle>
+          <v-list-item-title class="title">Desenvolvimento Web</v-list-item-title>
+          <v-list-item-subtitle>Projeto</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
       <v-divider></v-divider>
 
       <v-list dense nav>
-        <v-list-item v-for="item in items" :key="item.title" link>
+        <v-list-item v-for="item in items" :key="item.title" link :to="item.to">
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
@@ -34,11 +34,11 @@
       <v-spacer></v-spacer>
 
       <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
+        <v-icon>mdi-home</v-icon>
       </v-btn>
 
       <v-btn icon>
-        <v-icon>mdi-home</v-icon>
+        <v-icon>mdi-image</v-icon>
       </v-btn>
 
       <v-btn icon>
@@ -50,7 +50,7 @@
       </v-btn>
     </v-toolbar>
     <v-main>
-      <HelloWorld/>
+      <router-view/>
     </v-main>
     <v-bottom-navigation
       :value="value"
@@ -117,10 +117,10 @@ export default {
     return {
       drawer: false,
       items: [
-        { title: 'Pesquisa', icon: 'mdi-magnify' },
-        { title: 'Menu', icon: 'mdi-home' },
-        { title: 'Favoritos', icon: 'mdi-heart' },
-        { title: 'Localização', icon: 'mdi-map-marker' },
+        { title: 'Menu', icon: 'mdi-home', to:'/' },
+        { title: 'Imagens', icon: 'mdi-image', to:'/imagens' },
+        { title: 'Favoritos', icon: 'mdi-heart', to:'/favoritos' },
+        { title: 'Localização', icon: 'mdi-map-marker', to:'/locate' },
       ],
       links: [
         'Home',
