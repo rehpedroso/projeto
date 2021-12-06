@@ -11,6 +11,9 @@
 # Imagens
 ![alt text](https://github.com/rehpedroso/projeto/blob/master/projeto/Imagens.png)
 
+#Favoritos
+![alt text](https://github.com/rehpedroso/projeto/blob/master/projeto/Favoritos.png)
+
 # Localização
 ![alt text](https://github.com/rehpedroso/projeto/blob/master/projeto/Localizacao.png)
 
