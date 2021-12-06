@@ -5,8 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        cards: [],
-        title: "Hello Word"
+        cards: ['Thinker Bell', 'Thinker Bell', 'Thinker Bell', 'Thinker Bell', 'Thinker Bell', 'Thinker Bell'],
+        title: "Movies"
     },
     mutations: {
 
@@ -15,6 +15,8 @@ export default new Vuex.Store({
 
     },
     getters: {
-
+        bigTitle(state) {
+            return state.title.toUpperCase()
+        }
     },
 })

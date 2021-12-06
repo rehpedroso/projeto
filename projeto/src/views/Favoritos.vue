@@ -1,16 +1,16 @@
 <template>
     <div>
-        <h1>{{titleview}}</h1>
+        <h1>{{title}}</h1>
         <v-row>
             <v-col
-                v-for="(n,i) in 6"
-                :key="n"
+                v-for="(data,i) in myCard" 
+                :key="i"
                 cols="12"
                 sm="6"
                 md="4"
                 xs="2"
             >
-            <MyCard :id=i></MyCard>
+            <MyCard :id="i" :cardInfo="data"></MyCard>
             </v-col>
         </v-row>
     </div>
@@ -21,10 +21,17 @@ import MyCard from '../components/MyCard'
 import store from '../store'
 
 export default {
-    name: 'Favoritos',
     data(){
         return{
             titleview: store.state.title
+        }
+    },
+    computed: {
+        myCard() {
+            return store.state.cards
+        },
+        title() {
+            return store.getters.bigTitle
         }
     },
     components: {

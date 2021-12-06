@@ -117,7 +117,7 @@ export default {
     return {
       drawer: false,
       items: [
-        { title: 'Menu', icon: 'mdi-home', to:'/' },
+        { title: 'Página Inicial', icon: 'mdi-home', to:'/' },
         { title: 'Imagens', icon: 'mdi-image', to:'/imagens' },
         { title: 'Favoritos', icon: 'mdi-heart', to:'/favoritos' },
         { title: 'Localização', icon: 'mdi-map-marker', to:'/locate' },
