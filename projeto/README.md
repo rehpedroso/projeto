@@ -5,13 +5,13 @@
 ## AF1
 ![alt text](https://github.com/rehpedroso/projeto/blob/master/projeto/AF1.jpg)
 
-# Home
+# Pagina Inicial
 ![alt text](https://github.com/rehpedroso/projeto/blob/master/projeto/Home.png)
 
 # Imagens
 ![alt text](https://github.com/rehpedroso/projeto/blob/master/projeto/Imagens.png)
 
-#Favoritos
+# Favoritos
 ![alt text](https://github.com/rehpedroso/projeto/blob/master/projeto/Favoritos.png)
 
 # Localização
