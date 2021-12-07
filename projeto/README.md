@@ -17,6 +17,9 @@
 # Localização
 ![alt text](https://github.com/rehpedroso/projeto/blob/master/projeto/Localizacao.png)
 
+# AF3
+![alt text](https://github.com/rehpedroso/projeto/blob/master/projeto/FavoritosAPI.png)
+
 ## Project setup
 ```
 npm install
