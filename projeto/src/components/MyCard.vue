@@ -14,7 +14,7 @@
 
     <v-img
       height="250"
-      src="https://img.elo7.com.br/product/zoom/2541E38/projeto-proshow-producer-tema-tinker-bell-sininho-sininho.jpg"
+      src="https://tradeturismo.com.br/wp-content/uploads/2020/06/O-que-ainda-podemos-aprender-com-festivais-de-m%C3%BAsica-internacionais-1200x565.jpg"
     ></v-img>
 
     <v-card-title>{{cardInfo.title}}</v-card-title>
