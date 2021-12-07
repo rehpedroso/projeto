@@ -1,9 +1,10 @@
 <template>
     <div>
         <h1>{{title}}</h1>
+        <v-btn @click="fetch()">MAIS INFORMAÇÕES</v-btn>
         <v-row>
             <v-col
-                v-for="(data,i) in myCard" 
+                v-for="(data,i) in events" 
                 :key="i"
                 cols="12"
                 sm="6"
@@ -19,11 +20,13 @@
 <script>
 import MyCard from '../components/MyCard'
 import store from '../store'
+import axios from 'axios'
 
 export default {
     data(){
         return{
-            titleview: store.state.title
+            titleview: store.state.title,
+            events: null,
         }
     },
     computed: {
@@ -37,6 +40,17 @@ export default {
     components: {
         MyCard,
     },
+    methods: {
+        fetch(){
+            console.log('printando')
+            axios.get('https://agenda-balaguer.herokuapp.com/api/event')
+            .then(res=>{
+                console.log(res.data.values)
+                this.events=res.data.values
+            })
+            .catch(err=>{console.log(err)})
+        }
+    }
 }
 </script>
 

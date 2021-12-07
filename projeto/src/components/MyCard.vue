@@ -17,7 +17,10 @@
       src="https://img.elo7.com.br/product/zoom/2541E38/projeto-proshow-producer-tema-tinker-bell-sininho-sininho.jpg"
     ></v-img>
 
-    <v-card-title>{{cardInfo}}</v-card-title>
+    <v-card-title>{{cardInfo.title}}</v-card-title>
+    <v-card-subtitle>
+      {{cardInfo.description}}
+    </v-card-subtitle>
 
   </v-card>
 </template>
